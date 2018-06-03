@@ -1,11 +1,9 @@
 package com.yo1000.example.mockrestserviceserver
 
-import org.springframework.beans.factory.config.BeanDefinition
 import org.springframework.boot.SpringApplication
 import org.springframework.boot.autoconfigure.SpringBootApplication
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
-import org.springframework.context.annotation.Scope
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.RequestMapping
 import org.springframework.web.bind.annotation.RestController
@@ -21,7 +19,6 @@ fun main(args: Array<String>) {
 @Configuration
 class ExampleConfiguration {
     @Bean
-    @Scope(value = BeanDefinition.SCOPE_PROTOTYPE)
     fun restTemplate(): RestTemplate = RestTemplate()
 }
 

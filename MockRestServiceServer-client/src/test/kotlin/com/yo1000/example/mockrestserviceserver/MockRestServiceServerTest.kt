@@ -38,7 +38,7 @@ class MockRestServiceServerTest {
 
         MockRestServiceServer.bindTo(restTemplate).build().let {
             it.expect(MockRestRequestMatchers.requestTo(
-                    "http://127.0.0.1:8081/server/a"
+                    "http://localhost:8081/server/a"
             )).andExpect(
                     MockRestRequestMatchers.method(HttpMethod.GET)
             ).andRespond(MockRestResponseCreators.withSuccess("""
@@ -49,7 +49,7 @@ class MockRestServiceServerTest {
             ))
 
             it.expect(MockRestRequestMatchers.requestTo(
-                    "http://127.0.0.1:8081/server/b"
+                    "http://localhost:8081/server/b"
             )).andExpect(
                     MockRestRequestMatchers.method(HttpMethod.GET)
             ).andRespond(MockRestResponseCreators.withSuccess("""

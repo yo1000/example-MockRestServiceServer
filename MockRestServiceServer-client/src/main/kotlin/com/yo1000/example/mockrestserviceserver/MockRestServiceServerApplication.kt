@@ -29,8 +29,8 @@ class ExampleClientController(
 ) {
     @GetMapping
     fun get(): Any {
-        val mapA = restTemplate.getForObject("http://127.0.0.1:8081/server/a", Map::class.java)
-        val mapB = restTemplate.getForObject("http://127.0.0.1:8081/server/b", Map::class.java)
+        val mapA = restTemplate.getForObject("http://localhost:8081/server/a", Map::class.java)
+        val mapB = restTemplate.getForObject("http://localhost:8081/server/b", Map::class.java)
 
         return listOf(mapA, mapB)
     }
